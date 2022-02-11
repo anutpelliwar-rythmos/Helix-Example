@@ -1,0 +1,7 @@
+demo:
+  helix-cluster-name: ${HELIX_CLUSTER_NAME:rabbitmq-consumer-cluster}
+  state-model: OnlineOffline
+  zookeeper-address:  ${ZK_ADDRESS:zk:2181}
+  partition-count: ${PARTITIONS_COUNT:6}
+  resourceName: ${RESOURCE_NAME:topic}
+  

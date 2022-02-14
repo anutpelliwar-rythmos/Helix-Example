@@ -21,8 +21,8 @@ public class SetupConsumerCluster implements CommandLineRunner {
   public static int partition = 0;
 
 
-  @SuppressWarnings("deprecation")
   public void setupConsumerCluster() {
+
     String zkAddr = properties.getZookeeperAddress();
     String clusterName = properties.getHelixClusterName();
     partition = properties.getPartitionCount();

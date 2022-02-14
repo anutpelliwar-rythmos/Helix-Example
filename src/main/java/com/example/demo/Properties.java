@@ -3,7 +3,6 @@ package com.example.demo;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.context.annotation.Configuration;
-
 import lombok.Data;
 
 @Configuration
@@ -11,9 +10,9 @@ import lombok.Data;
 @Data
 @RefreshScope
 public class Properties {
-	private String zookeeperAddress;
-	  private String helixClusterName;
-	  private Integer partitionCount;
-	  private String stateModel;
-	  private String resourceName;
+  private String zookeeperAddress;
+  private String helixClusterName;
+  private Integer partitionCount;
+  private String stateModel;
+  private String resourceName;
 }

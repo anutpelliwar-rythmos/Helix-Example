@@ -55,7 +55,6 @@ public class Consumer implements CommandLineRunner {
     }
   }
 
-  @SuppressWarnings("deprecation")
   private void startConsumer() {
 
     final String hostName = System.getenv("HOSTNAME");

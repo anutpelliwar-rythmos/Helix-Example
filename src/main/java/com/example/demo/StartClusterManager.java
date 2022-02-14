@@ -23,7 +23,6 @@ public class StartClusterManager implements CommandLineRunner {
 
   private static Logger LOG = LoggerFactory.getLogger(StartClusterManager.class);
 
-  @SuppressWarnings("deprecation")
   public void startConsumerCluster() {
 
     HelixManager manager = null;

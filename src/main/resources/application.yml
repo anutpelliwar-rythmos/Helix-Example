@@ -1,7 +1,7 @@
 demo:
-  helix-cluster-name: ${HELIX_CLUSTER_NAME:rabbitmq-consumer-cluster}
-  state-model: OnlineOffline
-  zookeeper-address:  ${ZK_ADDRESS:zk:2181}
-  partition-count: ${PARTITIONS_COUNT:6}
-  resourceName: ${RESOURCE_NAME:topic}
-  
+      stateModel: OnlineOffline
+      zookeeperAddress: ${ZK_ADDRESS:zk:2181}
+      helixClusterName: ${HELIX_CLUSTER_NAME:rcx-events-publisher}
+      partitionCount: ${PARTITIONS_COUNT:3}
+      resourceName: ${RESOURCE_NAME:oplog.rs}
+      

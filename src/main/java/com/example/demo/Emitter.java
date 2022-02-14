@@ -1,6 +1,7 @@
 package com.example.demo;
 
 import javax.validation.constraints.NotNull;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
@@ -12,15 +13,14 @@ import com.rabbitmq.client.ConnectionFactory;
 @Component
 public class Emitter implements CommandLineRunner {
 
+  @Autowired
   private @NotNull Properties properties;
-
   private static final String EXCHANGE_NAME = "topic_logs";
 
   public static void send() throws Exception {
 
     final String mqServer = "mqServer";
     int count = Integer.MAX_VALUE;
-
     System.out.println("Sending " + count + " messages with random topic id");
 
     ConnectionFactory factory = new ConnectionFactory();

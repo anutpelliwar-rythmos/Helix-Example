@@ -6,6 +6,7 @@ import org.apache.helix.manager.zk.ZNRecordSerializer;
 import org.apache.helix.manager.zk.ZkClient;
 import org.apache.helix.model.IdealState.RebalanceMode;
 import org.apache.helix.model.OnlineOfflineSMD;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
@@ -16,10 +17,9 @@ import lombok.NonNull;
 @Component
 public class SetupConsumerCluster implements CommandLineRunner {
 
+  @Autowired
   private @NonNull Properties properties;
-
   public static int partition = 0;
-
 
   public void setupConsumerCluster() {
 

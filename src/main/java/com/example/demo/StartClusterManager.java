@@ -10,6 +10,7 @@ import org.apache.helix.manager.zk.ZkClient;
 import org.apache.helix.model.InstanceConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
@@ -18,7 +19,7 @@ import lombok.NonNull;
 @Order(2)
 @Component("clusterManager")
 public class StartClusterManager implements CommandLineRunner {
-
+  @Autowired
   private @NonNull Properties properties;
 
   private static Logger LOG = LoggerFactory.getLogger(StartClusterManager.class);
